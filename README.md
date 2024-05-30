@@ -1,4 +1,6 @@
-Console app for recording habits by date, name, whatever measurement and quantity user defines
+Console app for recording habits by date, name, whatever measurement and quantity user defines.
+
+Uses SQLite and creates a local database file in program folder if one doesn't already exist
 
 Download latest from releases, extract and run the .exe
 
