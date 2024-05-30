@@ -36,7 +36,7 @@ namespace HabitLogger
                 connection.Close();
             }
 
-            Menu.ShowMenu();
+            Console.Clear();
         }
 
         internal static void UpdateRecord()
@@ -48,7 +48,7 @@ namespace HabitLogger
             {
                 connection.Open();
                 var checkCommand = connection.CreateCommand();
-                checkCommand.CommandText = $"SELECT EXISTS(SELECT 1 FROM Habits WHERE Id = {recordId}";
+                checkCommand.CommandText = $"SELECT EXISTS(SELECT 1 FROM Habits WHERE Id = {recordId})";
                 int checkQuery = Convert.ToInt32(checkCommand.ExecuteScalar());
                 if (checkQuery == 0)
                 {
@@ -56,13 +56,15 @@ namespace HabitLogger
                     connection.Close();
                     UpdateRecord();
                 }
+
                 int newQuantity = Helpers.GetHabitQuantity("Enter new quantity: ");
                 var command = connection.CreateCommand();
+                command.CommandText = $"UPDATE Habits SET Quantity = {newQuantity} WHERE Id = {recordId}";
                 command.ExecuteNonQuery();
                 connection.Close();
             }
 
-            Menu.ShowMenu();
+            Console.Clear();
         }
 
         internal static void DeleteRecord()
@@ -79,7 +81,7 @@ namespace HabitLogger
                 connection.Close();
             }
 
-            Menu.ShowMenu();
+            Console.Clear();
         }
 
         internal static void ViewRecords()
