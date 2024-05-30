@@ -2,7 +2,7 @@ Console app for recording habits by date, name, whatever measurement and quantit
 
 Uses SQLite and creates a local database file in program folder if one doesn't already exist.
 
-Download latest version from releases [here](https://github.com/bheston1/console-habit-log/releases), extract and run the .exe
+Download latest version from releases [here](https://github.com/bheston1/console-habit-log/releases/latest), extract and run the .exe
 
 ![image](https://github.com/bheston1/console-habit-log/assets/111481356/6686625e-1c39-4638-80cb-22e7838ce3c6)
 
