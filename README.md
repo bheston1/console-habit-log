@@ -1,6 +1,12 @@
-Console app for recording habits by date, name, whatever measurement and quantity user defines.
+Learning project. Console app for recording habits by date, name, whatever measurement and quantity user defines.
 
-Uses SQLite and creates a local database file in program folder if one doesn't already exist.
+# Requirements
+
+- [x] User should defined registered habit
+- [x] Habit can't be tracked by time, only quantity (e.g., number of cigarettes, cans of soda, etc.)
+- [x] Logged habits should be stored in a database
+- [x] User should be able to add, delete, update and view their registered habits
+- [x] You can only interact with the database using raw SQL, don't use mappers such as Entity Framework
 
 Download latest version from releases [here](https://github.com/bheston1/console-habit-log/releases/latest), extract and run the .exe
 
